@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+</head>
+<style>
+
+    body{
+        --mycolor: black;
+        --mycolor2: white;
+        --mycolor3: gray;
+        background-color: var(--mycolor);
+        color: var(--mycolor2);
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 0.8rem;
+    }
+    .top_items{
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .container1{
+        display: grid;
+        grid-template-columns: 3fr 1fr 1fr;
+    }
+    .box {
+        border: 2px solid var(--mycolor2);
+        padding: 3em;
+        border-radius: 1em;
+        margin: 0.1vh;
+    }
+    .dark-mode{
+        --mycolor: white;
+        --mycolor2: black;
+        --mycolor3: rgb(84, 180, 160);
+
+    }
+    button{
+        border: 1px solid blueviolet;
+        background-color: var(--mycolor);
+        color: var(--mycolor2);
+    }
+    .box h5{
+        position: relative;
+        top: 100%;
+        left: 100%;
+    }
+
+
+    .container2{
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 
+    
+    }
+    .foot_box {
+        background-color: var(--mycolor3);
+
+    }
+
+</style>
+
+<body>
+    <div class="top_items">
+        <div><span>1<sup>st</sup></span></div>
+        <div><span class="cent">Best</span></div>
+        <button onclick="myFunction()">L/D</button>
+    </div>
+    <div class="container1">
+        <div class="box" id="boxx1"></div>
+        <div class="box" id="boxx2"><h5>Add</h5></div>
+        <div class="box" id="boxx3"><h5>Result</h5></div>
+        <div class="box" id="boxx4"></div>
+        <div class="box" id="boxx5"><h5>Result</h5></div>
+        <div class="box" id="boxx6"><h5>Result</h5></div>
+        <div class="box" id="boxx7"></div>
+        <div class="box" id="boxx8"><h5>Result</h5></div>
+        <div class="box" id="boxx9"><h5>Result</h5></div>
+    </div>
+    <footer class="container2">
+        <div class="foot_box"><h5>Box</h5></div>
+        <div class="foot_box"><h5>Box</h5></div>
+        <div class="foot_box"><h5>Box</h5></div>
+        <div class="foot_box"><h5>Box</h5></div>
+        <div class="foot_box"><h5>Box</h5></div>
+        <div class="foot_box"><h5>Box</h5></div>
+    </footer>
+    
+</body>
+<script>
+function myFunction(){
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+}
+    </script>
+</html>

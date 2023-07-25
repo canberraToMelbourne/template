@@ -15,6 +15,7 @@
         color: var(--mycolor2);
         font-family:Verdana, Geneva, Tahoma, sans-serif;
         font-size: 0.8rem;
+        overflow-x:hidden;
     }
     .top_items{
 
@@ -41,32 +42,55 @@
         border: 1px solid blueviolet;
         background-color: var(--mycolor);
         color: var(--mycolor2);
+
     }
+
+    .dark-mode #ld {
+        position: relative;
+        visibility: hidden;
+        
+    }
+
+    .dark-mode #ld {
+        content: '';
+        visibility: visible;
+    }
+
+
     .box h5{
         position: relative;
         top: 100%;
         left: 100%;
     }
 
-
-    .container2{
-        display: flex;
-        justify-content: space-between;
-        flex-grow: 
-    
-    }
     .foot_box {
         background-color: var(--mycolor3);
+        border-radius: 10px;
 
     }
+
+
+    .footer1 {  
+        position: fixed;  
+        bottom: 1px;
+        left: 5%;  
+        width: 90%;
+        min-height: 15%; 
+        text-align: center;  
+        display: grid;
+        grid-template-columns: repeat(6, auto);
+        grid-gap: 5%;
+
+    }  
+
 
 </style>
 
 <body>
     <div class="top_items">
-        <div><span>1<sup>st</sup></span></div>
+        <div><span style="font-size: large;">&#x1F495;</span></div>
         <div><span class="cent">Best</span></div>
-        <button onclick="myFunction()">L/D</button>
+        <button onclick="myFunction()"><span id="ld">&#9728;</span></button>
     </div>
     <div class="container1">
         <div class="box" id="boxx1"></div>
@@ -79,7 +103,7 @@
         <div class="box" id="boxx8"><h5>Result</h5></div>
         <div class="box" id="boxx9"><h5>Result</h5></div>
     </div>
-    <footer class="container2">
+    <footer class="footer1">
         <div class="foot_box"><h5>Box</h5></div>
         <div class="foot_box"><h5>Box</h5></div>
         <div class="foot_box"><h5>Box</h5></div>
